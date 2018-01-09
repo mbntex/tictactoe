@@ -1,7 +1,8 @@
 var query = require('cli-interact').getYesNo;
 var queryQuestion = require('cli-interact').question;
-//var symbolBlank = '____';
-//var symbolX = 'X X\n X \nX X'
+
+
+
 
 var ticTacToeGame = function () {
 
@@ -39,6 +40,8 @@ ticTacToeGame.prototype.printBoard = function () {
     console.log(this.boardStringPrint[i])
   }
   // console.log(this.instructions);
+  // console.log(symbolX);
+  // console.log(symbolO);
 }
 
 ticTacToeGame.prototype.turnChange = function () {
@@ -85,16 +88,16 @@ ticTacToeGame.prototype.winCheck = function () {
       if (this.board[r][c] === 'X') { winTally -- }
       if(this.board[0][c] === 'O' && this.board[1][c] === 'O' && this.board[2][c] === 'O') {
         console.log('O WINS!!!!!!'); myGame.turnsPlayed = 10;
-        break;
+        return;
       }
       if(this.board[0][c] === 'X' && this.board[1][c] === 'X' && this.board[2][c] === 'X') {
         console.log('X WINS!!!!!!'); myGame.turnsPlayed = 10;
-        break;
+        return;
       }
     }
   // console.log('WINTALLY = ', winTally);
-  if (winTally === 3) { console.log('O WINS!!!!!!'); myGame.turnsPlayed = 10; }
-  if (winTally === -3) { console.log('X WINS!!!!!!'); myGame.turnsPlayed = 10; }
+  if (winTally === 3) { console.log('O WINS!!!!!!'); myGame.turnsPlayed = 10; break; }
+  if (winTally === -3) { console.log('X WINS!!!!!!'); myGame.turnsPlayed = 10; break; }
   }
 }
 
