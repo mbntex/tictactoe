@@ -1,0 +1,22 @@
+{
+  "name": "tictactoe",
+  "version": "1.0.0",
+  "description": "simple game",
+  "main": "game.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbntex/tictactoe.git"
+  },
+  "author": "Michael Neveu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbntex/tictactoe/issues"
+  },
+  "homepage": "https://github.com/mbntex/tictactoe#readme",
+  "dependencies": {
+    "cli-interact": "^0.1.9"
+  }
+}
